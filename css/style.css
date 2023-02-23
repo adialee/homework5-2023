@@ -1,9 +1,10 @@
 #logo{
     animation-name: logo;
     animation-duration: 5s;
+    /* Keeps logo displayed after animation ends */
     animation-fill-mode: forwards;
 }
-
+/* Animation fades in and becomes bigger */
 @keyframes logo{
     from {
         width: 25px;
@@ -17,6 +18,7 @@
 
 body{
     font-family: "Poppins", serif;
+    /* Sets background to this color if image cannot be displayed */
     background-color: #f1f1f1;
     background-image: url("../images/concrete_seamless.png");
 }
@@ -28,9 +30,8 @@ header{
 .nav_links{ 
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
+/* Retains link color after being visited */
 .nav_item a:visited{
     color: #0000EE;
 }
@@ -48,6 +49,7 @@ header{
 }
 .pricing{
     display: flex;
+    /* Cards wrap to be on separate rows */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -58,6 +60,7 @@ header{
 }
 .gallery{
     display: flex;
+    /* Images spread out based on screen size */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -65,15 +68,17 @@ header{
     header{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        /* Spaces logo and nav links on opposite ends */
         justify-content: space-between;
     }
     .nav_links{
         display: flex;
+        /*Direction of links adjusted to wider screen size*/
         flex-direction: row;
     }
     .pricing{
         display: flex;
+        /* Cards centered around cross-axis */
         align-items: center;
     }
     .card{
@@ -82,10 +87,11 @@ header{
     }
     body > header{
         position: sticky;
+        /* Header sticks to the top of the page */
         top: 0;
     }
 }
-
+/* Turns off animation to display the final logo style */
 @media (prefers-reduced-motion: reduce) {
     #logo{
         animation: none;
@@ -95,9 +101,11 @@ header{
 @media print{
     body{
         font-family: Arial, Helvetica;
+        /* Removes background image to replace with a color */
         background-image: none;
         background-color: #f1f1f1;
     }
+    /* Ensures that nav links can space around the full width of the header */
     nav{
         width: 100%;
     }
@@ -108,6 +116,7 @@ header{
     }
     .pricing{
         display: flex;
+        /* Places cards next to each other on one line */
         flex-wrap: nowrap;
         align-items: flex-end;
     }
@@ -116,9 +125,11 @@ header{
         flex-basis: 325px;
         border: solid 2px #45ADDD;
     }
+    /* Hides gallery section without affecting the layout*/
     .gallery, #gallery{
         display: none;
     }
+    /* Adds the thumbs up emoji  */
     .card li:nth-child(2)::after{
         content: '👍';
     }
