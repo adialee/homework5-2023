@@ -129,7 +129,7 @@ header{
     .gallery, #gallery{
         display: none;
     }
-    /* Adds the thumbs up emoji  */
+    /* Adds the thumbs up emoji to affirm package descriptions for each package*/
     .card li:nth-child(2)::after{
         content: '👍';
     }
