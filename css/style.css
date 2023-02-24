@@ -31,7 +31,7 @@ header{
     display: flex;
     flex-direction: column;
 }
-/* Retains link color after being visited */
+/* Retains original link color even after being visited */
 .nav_item a:visited{
     color: #0000EE;
 }
@@ -41,7 +41,6 @@ header{
     padding: 20px 0;
     border-radius: 50px 50px 0 0;
 }
-/* check me, the white border */
 .card{
     display: flex;
     flex-direction: column;
@@ -69,7 +68,7 @@ header{
     header{
         display: flex;
         flex-direction: row;
-        /* Spaces logo and nav links on opposite ends */
+        /* Spaces logo and nav links out on opposite ends */
         justify-content: space-between;
     }
     .nav_links{
@@ -79,16 +78,16 @@ header{
     }
     .pricing{
         display: flex;
-        /* Cards centered around cross-axis */
+        /* Cards centered around cross-axis with differing heights*/
         align-items: center;
     }
     .card{
         display: flex;
         flex-basis: 275px;
     }
+    /* Header sticks to the top of the page */
     body > header{
         position: sticky;
-        /* Header sticks to the top of the page */
         top: 0;
     }
 }
