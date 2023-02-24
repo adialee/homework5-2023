@@ -41,6 +41,7 @@ header{
     padding: 20px 0;
     border-radius: 50px 50px 0 0;
 }
+/* check me, the white border */
 .card{
     display: flex;
     flex-direction: column;
@@ -125,8 +126,12 @@ header{
         flex-basis: 325px;
         border: solid 2px #45ADDD;
     }
-    /* Hides gallery section without affecting the layout*/
-    .gallery, #gallery{
+    /* Hides gallery heading but preserves the space it takes up*/
+    #gallery{
+        visibility: hidden;
+    }
+    /* Hides images in gallery without affecting the layout */
+    .gallery{
         display: none;
     }
     /* Adds the thumbs up emoji to affirm package descriptions for each package*/
